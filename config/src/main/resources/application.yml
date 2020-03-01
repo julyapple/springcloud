@@ -1,0 +1,22 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/julyapple/springTest.git #配置git仓库地址
+          searchPaths: config #配置仓库路径
+          username: 760990174@qq.com #访问git仓库的用户名
+          password: 15857565977pbh #访问git仓库的用户密码
+      label: master #配置仓库的分支
+#        native:
+#          search-locations: D:\SpringCloudLesson-master\第09课\config\eurekaclient.yml
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
